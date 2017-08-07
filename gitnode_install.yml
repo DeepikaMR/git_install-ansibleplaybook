@@ -1,0 +1,12 @@
+---
+- hosts: ansible@ansiblenode
+  sudo: yes
+  user: ansible
+  tasks:
+   - name: Install git 
+     command: sudo apt-get install git -y --force-yes
+     sudo: yes
+     environment:
+       http_proxy: http://10.28.24.76:8080
+       https_proxy: https://10.28.24.76:8080
+
